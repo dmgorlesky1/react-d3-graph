@@ -417,6 +417,7 @@ export default class Graph extends React.Component {
    * @returns {undefined}
    */
   onRightClickNode = (event, id) => {
+    console.log("inside rightClick");
     const clickedNode = this.state.nodes[id];
     this.props.onRightClickNode && this.props.onRightClickNode(event, id, clickedNode);
   };
