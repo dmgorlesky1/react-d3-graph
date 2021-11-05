@@ -443,6 +443,8 @@ export default class Graph extends React.Component {
    * @returns {undefined}
    */
   onMouseOutNode = id => {
+    throwErr(this.constructor.name, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
     if (this.isDraggingNode) {
       return;
     }
@@ -469,9 +471,6 @@ export default class Graph extends React.Component {
     }
   };
   
-  onCall = () => {
-    throwErr(this.constructor.name, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-  };
 
   /**
    * Handles mouse out link event.
@@ -676,7 +675,6 @@ export default class Graph extends React.Component {
         onRightClickLink: this.props.onRightClickLink,
         onMouseOverLink: this.onMouseOverLink,
         onMouseOutLink: this.onMouseOutLink,
-        onCall: this.onCall,
       },
       this.state.config,
       this.state.highlightedNode,
