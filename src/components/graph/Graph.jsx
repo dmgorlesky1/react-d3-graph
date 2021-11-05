@@ -417,7 +417,6 @@ export default class Graph extends React.Component {
    * @returns {undefined}
    */
   onRightClickNode = (event, id) => {
-    window.alert("inside rightClick");
     const clickedNode = this.state.nodes[id];
     this.props.onRightClickNode && this.props.onRightClickNode(event, id, clickedNode);
   };
@@ -468,6 +467,10 @@ export default class Graph extends React.Component {
 
       this._tick({ highlightedLink });
     }
+  };
+  
+  onCall = () => {
+    throwErr(this.constructor.name, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
   };
 
   /**
@@ -547,7 +550,6 @@ export default class Graph extends React.Component {
 
   constructor(props) {
     super(props);
-    throwErr("hello");
     if (!this.props.id) {
       throwErr(this.constructor.name, ERRORS.GRAPH_NO_ID_PROP);
     }
