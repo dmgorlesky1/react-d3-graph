@@ -443,7 +443,7 @@ export default class Graph extends React.Component {
    * @returns {undefined}
    */
   onMouseOutNode = id => {
-    throwErr(this.constructor.name, "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+    throwErr("Inside here", "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 
     if (this.isDraggingNode) {
       return;
