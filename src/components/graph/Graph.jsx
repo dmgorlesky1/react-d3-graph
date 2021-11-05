@@ -676,6 +676,7 @@ export default class Graph extends React.Component {
         onRightClickLink: this.props.onRightClickLink,
         onMouseOverLink: this.onMouseOverLink,
         onMouseOutLink: this.onMouseOutLink,
+        onCall: this.onCall,
       },
       this.state.config,
       this.state.highlightedNode,
